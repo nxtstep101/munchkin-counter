@@ -19,7 +19,18 @@ elseif (isset($_POST['gear_de']) && $gear > 0) {
 ?>
 <!DOCTYPE html>
 <html>
-  <body>
-  
-  </body>
-</html
+   <body>
+      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+         <b>Level</b><br />
+         <?php print $level;?>
+         <input type="submit" name="lvl_in" value="+"><br />
+         <input type="submit" name="lvl_de" value="-">
+         <b>Gear</b><br />
+         <?php print $gear;?>
+         <input type="submit" name="gear_in" value="+"><br />
+         <input type="submit" name="gear_de" value="-">
+         <b>Strength</b><br />
+         <?php print $strength;?>
+      </form>
+   </body>
+</html>
