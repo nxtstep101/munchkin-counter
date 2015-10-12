@@ -1,13 +1,13 @@
 <?php
 //defining initial values
-$level = 0;
+$level = 1;
 $gear = 0;
 $strength = $level + $gear;
 //checks which button was clicked
 if (isset($_POST['lvl_in'])) {
 	$level++;
 }
-elseif (isset($_POST['lvl_de'])) {
+elseif (isset($_POST['lvl_de']) && $level > 1) {
 	$level = $level - 1;
 }
 elseif (isset($_POST['gear_in'])) {
