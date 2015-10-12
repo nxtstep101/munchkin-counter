@@ -1,10 +1,13 @@
 <?php
 function counterStart()
 {
+	//starts session
 	session_start();
+	//defines initial values
 	$_SESSION['level'] = ((isset($_SESSION['level'])) ? $_SESSION['level'] : 1);
 	$_SESSION['gear'] = ((isset($_SESSION['gear'])) ? $_SESSION['gear'] : 0);
 	$_SESSION['strength'] = $_SESSION['level'] + $_SESSION['gear'];
+	//checks which button was clicked
 	if (isset($_POST['lvl_in'])) {
 		$_SESSION['level']++;
 	}
