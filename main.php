@@ -11,14 +11,14 @@ function counterStart()
 	if (isset($_POST['lvl_in'])) {
 		$_SESSION['level']++;
 	}
-	elseif (isset($_POST['lvl_de']) && $level > 1) {
-		$_SESSION['level'] = $_SESSION['level'] - 1;
+	elseif (isset($_POST['lvl_de']) && $_SESSION['level'] > 1) {
+		$_SESSION['level']--;
 	}
 	elseif (isset($_POST['gear_in'])) {
 		$_SESSION['gear']++;
 	}
-	elseif (isset($_POST['gear_de']) && $gear > 0) {
-		$_SESSION['gear'] = $_SESSION['gear'] - 1;
+	elseif (isset($_POST['gear_de']) && $_SESSION['gear'] > 0) {
+		$_SESSION['gear']--;
 	}
 	else {
 		session_unset();
