@@ -1,4 +1,13 @@
 <?php
+/***TO-DO: 
+	- Fix problem with initial level not being part of final strength
+	- Figure out why sometime subtracting doesn't subtract from strength
+	- Make it so that once a user reaches level 10 they win (special message?)
+	- Add style to give it a better look
+	- Fix any other bugs that may arise
+	- BONUS: add a battle calculator that combines strengths against monsters
+***/
+
 function counterStart()
 {
 	//starts session
